@@ -19,8 +19,8 @@
         app:layout_constraintVertical_bias="0.856"
         app:srcCompat="@drawable/kyubi_pic" />-->
 
-    <Button
-        android:id="@+id/button"
+    <!--<Button
+        android:id="@+id/pButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Button"
@@ -29,7 +29,11 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.499"
+        android:backgroundTint="@android:color/holo_purple"
+        android:textColor="@android:color/white"
+        />-->
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

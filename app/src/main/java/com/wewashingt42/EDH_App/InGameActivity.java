@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class InGameActivity extends AppCompatActivity {
@@ -13,6 +15,7 @@ public class InGameActivity extends AppCompatActivity {
     public static final int DEFAULT_PLAYER_COUNT = 1;
     private int playerCount = 0;
     private int playerLifeTotal = 0;
+    private Button pButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +30,14 @@ public class InGameActivity extends AppCompatActivity {
         playerCount = intent.getIntExtra("PlayerCount", DEFAULT_PLAYER_COUNT);
         //TextView testTextView = findViewById(R.id.testTextView);
         //testTextView.setText(String.valueOf(playerCount));
+
+        /*pButton = findViewById(R.id.pButton);
+
+        pButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });*/
     }
 }
