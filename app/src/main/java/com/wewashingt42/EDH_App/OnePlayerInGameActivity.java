@@ -10,10 +10,10 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class InGameActivity extends AppCompatActivity {
+public class OnePlayerInGameActivity extends AppCompatActivity {
     public static final int DEFAULT_PLAYER_LIFE_TOTAL = 20;
     public static final int DEFAULT_PLAYER_COUNT = 1;
-    private int playerCount = 0;
+    //private int playerCount = 1;
     private int playerLifeTotal = 0;
     private Button addLifeButton;
     private Button subLifeButton;
@@ -25,11 +25,11 @@ public class InGameActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_in_game);
+        setContentView(R.layout.activity_1p_in_game);
 
         Intent intent = getIntent();
         playerLifeTotal = intent.getIntExtra("PlayerLifeTotal", DEFAULT_PLAYER_LIFE_TOTAL);
-        playerCount = intent.getIntExtra("PlayerCount", DEFAULT_PLAYER_COUNT);
+        //playerCount = intent.getIntExtra("PlayerCount", DEFAULT_PLAYER_COUNT);
         lifeTotalTextView = findViewById(R.id.lifeTotalTextView);
         lifeTotalTextView.setText(Integer.toString(playerLifeTotal));
 

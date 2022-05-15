@@ -77,8 +77,16 @@ public class PlayerCountActivity extends AppCompatActivity {
     }
 
     private void openInGameActivity(int playerCount) {
-        Intent intent = new Intent(this, InGameActivity.class);
-        intent.putExtra("PlayerCount", playerCount);
+        Intent intent;
+        switch(playerCount) {
+            case 1: intent = new Intent(this, OnePlayerInGameActivity.class);
+                break;
+            case 2: intent = new Intent(this,TwoPlayerInGameActivity.class);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + playerCount);
+        }
+        //intent.putExtra("PlayerCount", playerCount);
         intent.putExtra("PlayerLifeTotal", lifeTotal);
         startActivity(intent);
     }
