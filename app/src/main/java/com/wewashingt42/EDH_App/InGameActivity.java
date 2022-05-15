@@ -15,7 +15,9 @@ public class InGameActivity extends AppCompatActivity {
     public static final int DEFAULT_PLAYER_COUNT = 1;
     private int playerCount = 0;
     private int playerLifeTotal = 0;
-    private Button pButton;
+    private Button addLifeButton;
+    private Button subLifeButton;
+    private TextView lifeTotalTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +30,30 @@ public class InGameActivity extends AppCompatActivity {
         Intent intent = getIntent();
         playerLifeTotal = intent.getIntExtra("PlayerLifeTotal", DEFAULT_PLAYER_LIFE_TOTAL);
         playerCount = intent.getIntExtra("PlayerCount", DEFAULT_PLAYER_COUNT);
-        //TextView testTextView = findViewById(R.id.testTextView);
-        //testTextView.setText(String.valueOf(playerCount));
+        lifeTotalTextView = findViewById(R.id.lifeTotalTextView);
+        lifeTotalTextView.setText(Integer.toString(playerLifeTotal));
 
-        /*pButton = findViewById(R.id.pButton);
+        addLifeButton = findViewById(R.id.addLifeButton);
+        subLifeButton = findViewById(R.id.subLifeButton);
 
-        pButton.setOnClickListener(new View.OnClickListener() {
+
+        addLifeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                playerLifeTotal++;
+                lifeTotalTextView.setText(Integer.toString(playerLifeTotal));
             }
-        });*/
+        });
+
+        subLifeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                playerLifeTotal--;
+                lifeTotalTextView.setText(Integer.toString(playerLifeTotal));
+            }
+        });
+
+
+
     }
 }

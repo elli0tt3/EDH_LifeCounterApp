@@ -13,9 +13,9 @@
         android:id="@+id/msg1TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
         android:textSize="40sp"
-        android:text="Choose Your Starting Life Total" />
+        android:text="Choose Your Starting Life Total"
+        android:textAlignment="center"/>
 
     <Button
         android:id="@+id/fortyLifeButton"

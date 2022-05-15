@@ -28,10 +28,8 @@ public class PlayerCountActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_player_count);
 
-        TextView msg2TextView = findViewById(R.id.msg2TextView);
         Intent intent = getIntent();
         lifeTotal = intent.getIntExtra("PlayerLifeTotal", DEFAULT_PLAYER_LIFE_TOTAL);
-        msg2TextView.setText(String.valueOf(lifeTotal));
 
         onePlayerButton = findViewById(R.id.onePlayerButton);
         twoPlayerButton = findViewById(R.id.twoPlayerButton);
